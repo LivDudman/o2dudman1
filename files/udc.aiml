@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+    
+<category>
+    <pattern>*</pattern>
+    <template>I do not have an answer for that</template>
+</category>
+
+<category>
+    <pattern>BRISTOL</pattern>
+    <template>In the South-West of England</template>
+</category>
+
+<category>
+   <pattern>_ BRISTOL</pattern>
+   <template>
+      <srai>BRISTOL</srai>
+   </template>
+</category>
+
+<category>
+   <pattern>_ BRISTOL *</pattern>
+   <template>
+      <srai>BRISTOL</srai>
+   </template>
+</category>
+
+<category>
+   <pattern>BRISTOL *</pattern>
+   <template>
+      <srai>BRISTOL</srai>
+   </template>
+</category>
+
+
+  <category>
+      <pattern>LONDON</pattern>
+      <template>Somewhere east of Bristol</template>
+  </category>
+<category>
+   <pattern>_ LONDON</pattern>
+   <template>
+      <srai>LONDON</srai>
+   </template>
+</category>
+<category>
+   <pattern>_ LONDON *</pattern>
+   <template>
+      <srai>LONDON</srai>
+   </template>
+</category>
+
+<category>
+   <pattern>LONDON *</pattern>
+   <template>
+      <srai>LONDON</srai>
+   </template>
+</category>
+
+
+  <category>
+      <pattern>CARDIFF</pattern>
+      <template>In Wales</template>
+  </category>
+<category>
+   <pattern>_ CARDIFF</pattern>
+   <template>
+      <srai>CARDIFF</srai>
+   </template>
+</category>
+<category>
+   <pattern>_ CARDIFF *</pattern>
+   <template>
+      <srai>CARDIFF</srai>
+   </template>
+</category>
+
+<category>
+   <pattern>CARDIFF *</pattern>
+   <template>
+      <srai>CARDIFF</srai>
+   </template>
+</category>
+
+
+  <category>
+      <pattern>UWE</pattern>
+      <template>In north Bristol</template>
+  </category>
+  
+<category>
+   <pattern>_ UWE</pattern>
+   <template>
+      <srai>UWE</srai>
+   </template>
+</category>
+
+<category>
+    <pattern>_ UWE *</pattern>
+   <template>
+      <srai>UWE</srai>
+   </template>
+</category>
+
+<category>
+   <pattern>UWE *</pattern>
+   <template>
+      <srai>UWE</srai>
+   </template>
+</category>
+
+
+  <category>
+      <pattern>BEAUTY</pattern>
+      <template>In the eye of the beholder</template>
+  </category>
+  
+<category>
+   <pattern>_ BEAUTY</pattern>
+   <template>
+      <srai>BEAUTY</srai>
+   </template>
+</category>
+
+<category>
+    <pattern>_ BEAUTY *</pattern>
+   <template>
+      <srai>BEAUTY</srai>
+   </template>
+</category>
+
+<category>
+   <pattern>BEAUTY *</pattern>
+   <template>
+      <srai>BEAUTY</srai>
+   </template>
+</category>
+
+<category>
+   <pattern>BEAUTY *</pattern>
+   <template>
+      <srai>BEAUTY</srai>
+   </template>
+</category>
+
+    <category>
+        <pattern>What is the population of Bristol</pattern>
+        <template>The population of Bristol is over 450000</template>
+    </category>
+
+    <category>
+        <pattern>how many people live in bristol</pattern>
+        <template><srai>WHAT IS THE POPULATION OF BRISTOL</srai></template>
+    </category>
+
+        
+    <category>
+        <pattern>What is the population of London</pattern>
+        <template>The population of London is about 8.7 million</template>
+    </category>
+
+    <category>
+        <pattern>how many people live in London</pattern>
+        <template><srai>WHAT IS THE POPULATION OF LONDON</srai></template>
+    </category>
+
+        
+    <category>
+        <pattern>What is the population of Cardiff</pattern>
+        <template>The population of Cardiff is over 360000</template>
+    </category>
+    
+    <category>
+        <pattern>how many people live in cardiff</pattern>
+        <template><srai>WHAT IS THE POPULATION OF CARDIFF</srai></template>
+    </category>
+
+
+<category>
+    <pattern>How many people live in Keynsham</pattern>
+    <template>I do not know what the population of Keynsham is</template>
+    <think><set var="KEYNSHAM">KEYNSHAM</set></think>
+</category>
+
+<category>
+    <pattern>WHERE IS KEYNSHAM</pattern>
+    <template>I do not know where keynsham is<think><set var="where">WHERE</set></think></template>
+</category>
+
+<topic var="WHERE">
+    <category>
+    <pattern>why not?</pattern>
+    <template>Because i do not have a category to connect me to a mapping service</template>
+</category>
+</topic>
+
+<topic name="KEYNSHAM">
+    <category>
+        <pattern>Why not?</pattern>
+        
+        <template>because it is too hard to count the residents of Keynsham</template>
+    </category>
+</topic>
+<category>
+    <pattern>How many people live in space</pattern>
+    <template>I do not know what the population of space is</template>
+    <think><set var="space">SPACE</set></think>
+</category>
+<topic name="SPACE">
+    <category>
+        <pattern>Why not?</pattern>
+        <template>because it is too hard to count the residents of space</template>
+    </category>
+</topic>
+
+
+<topic name="space">
+	<category>
+		<pattern>WHY NOT</pattern>
+		<that>I DO NOT KNOW WHAT THE POPULATION OF SPACE IS</that>
+		<template>because it is too hard to count the residents of space</template>
+	</category>
+</topic>
+
+</aiml>
